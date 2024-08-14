@@ -12,13 +12,64 @@
         gtag('js', new Date());
         gtag('config', 'G-8CEJWZNLD3');
     </script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('smart_home.png');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .loading-icon {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://www.autohomeit.ro">click here</a>.</p>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Economisește cu tehnologie SMART de ultimă generație pe AUTOHOMEIT</h1>
+        <div class="loading-icon"></div>
+    </div>
+
     <script>
+        // Redirect after 5 seconds
         setTimeout(function(){
-            window.location.href = 'https://www.autohomeit.ro';
-        }, 5000); // Redirect after 5 seconds
+            window.location.href = "https://autohomeit.ro";
+        }, 5000);
     </script>
 </body>
 </html>
